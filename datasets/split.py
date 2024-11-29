@@ -49,4 +49,4 @@ def split_dataset(input_file, train_output_file, test_output_file, train_size=0.
     print(f"Train dataset saved to {train_output_file}")
     print(f"Test dataset saved to {test_output_file}")
 
-split_dataset('data.json', 'train.json', 'test.json', train_size=0.8)
+split_dataset('airship/annotations/annotations.json', 'train.json', 'test.json', train_size=0.8)

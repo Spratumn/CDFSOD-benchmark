@@ -553,7 +553,9 @@ class OpenSetDetectorWithExamples(nn.Module):
                 prototype_label_names = p1['label_names'] + p2['label_names']
         else:
             raise NotImplementedError()
-
+        # print(prototype_label_names)
+        # print(seen_cids)
+        # print(all_cids)
         self.num_train_classes = len(seen_cids)
         self.num_classes = len(all_cids)
         train_class_order = [prototype_label_names.index(c) for c in seen_cids]
@@ -867,7 +869,6 @@ class OpenSetDetectorWithExamples(nn.Module):
             vit_feat_name = f'res{cfg.DE.OUT_INDICES[-1]}'
         else:
             vit_feat_name = f'res{backbone.n_blocks - 1}'
-
         return {
             "backbone": backbone,
             "pixel_mean": cfg.MODEL.PIXEL_MEAN,

@@ -1,11 +1,6 @@
-import json
-
-import numpy as np
 import torch
 import fire
 torch.set_grad_enabled(False)
-from torchvision import transforms
-from typing import Sequence
 import sys
 import os.path as osp
 sys.path.append(osp.join(osp.dirname(__file__), ".."))
@@ -23,13 +18,6 @@ from detectron2.data.dataset_mapper import DatasetMapper
 from lib.detr_mapper import DetrDatasetMapper
 from fast_pytorch_kmeans import KMeans
 from lib.categories import ALL_CLS_DICT
-import lib.data.fewshot
-import lib.data.ovdshot
-import lib.data.lvis
-
-import matplotlib.pyplot as plt
-from skimage.filters import gaussian
-import cv2
 
 
 pixel_mean = torch.Tensor([123.675, 116.280, 103.530]).view(3, 1, 1)

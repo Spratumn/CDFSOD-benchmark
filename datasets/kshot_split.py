@@ -58,4 +58,4 @@ def filter_k_shot_json(input_file, output_file, k_shot):
     print(f"{k_shot}-shot JSON data has been saved to {output_file}")
 
 # Example usage
-filter_k_shot_json('/path/to/file.json]', '1_shot.json', k_shot=1)
+filter_k_shot_json('airship/annotations/train.json', '10_shot.json', k_shot=10)
